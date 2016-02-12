@@ -25,7 +25,8 @@ class App extends Component {
       <div style={styles}>
         <header style={{backgroundColor: '#CCC', padding: '20px'}}>
           <h1>Animated Grid</h1>
-          <div>Click on an element to remove it</div>
+          <div>Click on an element to remove it. Or here to <button onClick={() => this.setState({removedElements: []})}>Reset</button>
+          </div>
         </header>
         <AnimatedGrid
           width={170}
