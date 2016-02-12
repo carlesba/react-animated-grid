@@ -43,11 +43,12 @@ class AnimatedGrid extends Component {
     )
   }
   getChildStyles (top, left) {
+    const {transitionTime, transitionTimingFunction} = this.props
     return {
       position: 'absolute',
       top: `${top}px`,
       left: `${left}px`,
-      transition: '400ms top ease-out, 400ms left ease-out'
+      transition: `${transitionTime} top ${transitionTimingFunction}, ${transitionTime} left ${transitionTimingFunction}`
     }
   }
   render () {
@@ -66,11 +67,15 @@ AnimatedGrid.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   className: PropTypes.string,
+  transitionTime: PropTypes.string,
+  transitionTimingFunction: PropTypes.string,
   margin: PropTypes.number,
   children: PropTypes.array
 }
 AnimatedGrid.defaultProps = {
-  margin: 10
+  margin: 10,
+  transitionTime: '400ms',
+  transitionTimingFunction: 'ease-out'
 }
 
 /*

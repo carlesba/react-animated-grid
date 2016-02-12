@@ -32,6 +32,8 @@ class App extends Component {
           width={170}
           height={200}
           margin={10}
+          transitionTime={'400ms'}
+          transitionTimingFunction={'ease-in-out'}
           >
           {this.renderElements()}
         </AnimatedGrid>
