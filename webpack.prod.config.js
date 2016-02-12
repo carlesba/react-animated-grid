@@ -5,12 +5,12 @@ module.exports = {
   context: __dirname + '/src',
   entry: {
     index: [
-      './index'
+      './AnimatedGrid'
     ]
   },
   output: {
     path: __dirname + '/dist',
-    filename: '[name].dist.js'
+    filename: 'AnimatedGrid.js'
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
