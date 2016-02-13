@@ -1,4 +1,5 @@
-import React, {Component, PropTypes, Children} from 'react'
+const React = require('react')
+const {Component, PropTypes, Children} = React
 
 class AnimatedGrid extends Component {
   constructor (props) {
@@ -112,4 +113,4 @@ const calculateCoordinates = (row, col, width, height, margin, verticalMargin) =
   }
 }
 
-export default AnimatedGrid
+module.exports = AnimatedGrid
