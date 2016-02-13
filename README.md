@@ -9,7 +9,8 @@ Children's size has to be specified on Component Props.
   height={170}
   margin={10}
   className={'wrapper-classname'}
-  childClassName={'classname-applied-to-children-wrapper'}
+  transitionTime={'400ms'}
+  transitionTimingFunction={'ease-in-out'}
   >
   {listOfElements}
 </AnimatedGrid>
