@@ -1,13 +1,13 @@
 {
   "name": "react-animated-grid",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A React component that renders its children in a grid animating them when their position changes",
-  "main": "./src/AnimatedGrid.js",
+  "main": "./dist/AnimatedGrid.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server -d -w --colors",
-    "clean": "rm -rf ./tmp",
-    "precompile": "npm run clean; mkdir tmp",
-    "compile": "./node_modules/.bin/babel ./src --out-dir ./tmp",
+    "clean": "rm -rf ./dist",
+    "precompile": "npm run clean; mkdir dist",
+    "compile": "./node_modules/.bin/babel ./src --out-dir ./dist",
     "prepublish": "npm run precompile; npm run compile;",
     "postpublish": "npm run clean",
     "test": "echo \"Error: no test specified\" && exit 1"
