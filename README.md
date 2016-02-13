@@ -16,3 +16,26 @@ Children's size has to be specified on Component Props.
 ```
 
 
+## Usage
+
+Install dependency
+```
+npm install animated-grid --save
+```
+
+Use it on your project
+```js
+import AnimatedGrid from 'animated-grid'
+```
+
+## Try it
+
+```
+git clone git@github.com:carlesba/animated-grid.git
+npm install
+npm start
+```
+
+Visit http://localhost:8080
+
+
