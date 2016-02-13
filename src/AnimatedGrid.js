@@ -37,7 +37,7 @@ class AnimatedGrid extends Component {
   renderChild (child, top = 0, left = 0) {
     return (
       <div
-        className='o-moving-grid__item'
+        className={this.props.childClassName}
         key={child.key}
         style={this.getChildStyles(top, left)}
       >{child}</div>
@@ -53,12 +53,10 @@ class AnimatedGrid extends Component {
     }
   }
   render () {
-    const {className} = this.props
-    const classes = ['o-moving-grid', className]
     return (
       <div
         ref={node => this._wrapper = node}
-        className={classes.join(' ')}
+        className={this.props.className}
         style={{position: 'relative'}}
       >{this.parseChildren()}</div>
     )
@@ -68,6 +66,7 @@ AnimatedGrid.propTypes = {
   width: PropTypes.number.isRequired,
   height: PropTypes.number.isRequired,
   className: PropTypes.string,
+  childClassName: PropTypes.string,
   transitionTime: PropTypes.string,
   transitionTimingFunction: PropTypes.string,
   margin: PropTypes.number,
@@ -75,6 +74,8 @@ AnimatedGrid.propTypes = {
 }
 AnimatedGrid.defaultProps = {
   margin: 10,
+  className: '',
+  childClassName: '',
   transitionTime: '400ms',
   transitionTimingFunction: 'ease-out'
 }

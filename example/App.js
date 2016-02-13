@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import AnimatedGrid from '../src/AnimatedGrid'
-
+require('./main.sass')
 const newArray = (length) => {
   return Array.apply(null, Array(length)).map(Number.prototype.valueOf, 0)
 }
@@ -16,14 +16,9 @@ class App extends Component {
     }
   }
   render () {
-    const styles = {
-      maxWidth: '60%',
-      width: '900px',
-      margin: 'auto'
-    }
     return (
-      <div style={styles}>
-        <header style={{backgroundColor: '#CCC', padding: '20px'}}>
+      <div className='app'>
+        <header className='header'>
           <h1>Animated Grid</h1>
           <div>Click on an element to remove it. Or here to <button onClick={() => this.setState({removedElements: []})}>Reset</button>
           </div>
@@ -32,6 +27,7 @@ class App extends Component {
           width={170}
           height={200}
           margin={10}
+          className='gallery'
           transitionTime={'400ms'}
           transitionTimingFunction={'ease-in-out'}
           >
@@ -51,18 +47,9 @@ class App extends Component {
           className='item'
           key={id}
           onClick={() => this.removeElement(id)}
-          style={this.elementStyle}
           >{name}</div>
       )
     })
-  }
-  get elementStyle () {
-    return {
-      backgroundColor: '#FC0',
-      height: '200px',
-      width: '170px',
-      cursor: 'pointer'
-    }
   }
   removeElement (id) {
     const {removedElements} = this.state
