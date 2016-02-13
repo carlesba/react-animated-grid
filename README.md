@@ -21,7 +21,7 @@ Children's size has to be specified on Component Props.
 
 Install dependency
 ```
-npm install animated-grid --save
+npm install react-animated-grid --save
 ```
 
 Use it on your project
