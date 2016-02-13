@@ -1,6 +1,8 @@
 # Animated Grid
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
+[demo](http://carlesba.github.io/react-animated-grid/demo)
+
 A React component that renders its children in a grid animating them when their position changes.
 Children's size has to be specified on Component Props.
 

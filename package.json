@@ -1,6 +1,6 @@
 {
   "name": "react-animated-grid",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A React component that renders its children in a grid animating them when their position changes",
   "main": "./dist/AnimatedGrid.js",
   "scripts": {
