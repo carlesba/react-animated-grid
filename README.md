@@ -31,12 +31,22 @@ import AnimatedGrid from 'react-animated-grid'
 
 ## Try it
 
+Clone the project
+
 ```
 git clone git@github.com:carlesba/animated-grid.git
-npm install
-npm start
-// Visit [http://localhost:8080](http://localhost:8080)
 ```
 
+Install dependencies
 
+```
+npm install
+```
 
+Start server
+
+```
+npm start
+```
+
+and visit [http://localhost:8080](http://localhost:8080)
