@@ -1,11 +1,20 @@
 {
-  "name": "babel-skeleton",
-  "version": "1.0.0",
-  "description": "",
+  "name": "animated-grid",
+  "version": "0.0.1",
+  "description": "A React component that renders its children in a grid animating them when their position changes",
   "main": "./src/AnimatedGrid.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server -d -w --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "animation",
+    "component"
+  ],
+  "bugs": {
+    "url": "https://github.com/carlesba/animated-grid/issues"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -22,17 +31,16 @@
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "url-loader": "^0.5.7",
+    "react-dom": "^0.14.7",
     "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {
-    "bourbon": "^4.2.6",
-    "classname": "0.0.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-redux": "^4.4.0",
-    "redux": "^3.3.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlesba/animated-grid"
   },
-  "keywords": [],
+  "peerDependencies": {
+    "react": "^0.14.7"
+  },
   "author": "@carlesba",
   "license": "ISC"
 }
