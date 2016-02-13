@@ -26,7 +26,7 @@ npm install react-animated-grid --save
 
 Use it on your project
 ```js
-import AnimatedGrid from 'animated-grid'
+import AnimatedGrid from 'react-animated-grid'
 ```
 
 ## Try it
