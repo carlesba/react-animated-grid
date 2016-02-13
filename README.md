@@ -35,8 +35,8 @@ import AnimatedGrid from 'animated-grid'
 git clone git@github.com:carlesba/animated-grid.git
 npm install
 npm start
+// Visit [http://localhost:8080](http://localhost:8080)
 ```
 
-Visit [http://localhost:8080](http://localhost:8080)
 
 
