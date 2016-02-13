@@ -2,10 +2,9 @@
   "name": "babel-skeleton",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/AnimatedGrid.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server -d -w --colors",
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import AnimatedGrid from './AnimatedGrid'
+import AnimatedGrid from '../src/AnimatedGrid'
 
 const newArray = (length) => {
   return Array.apply(null, Array(length)).map(Number.prototype.valueOf, 0)
