@@ -1,5 +1,5 @@
 {
-  "name": "animated-grid",
+  "name": "react-animated-grid",
   "version": "0.0.1",
   "description": "A React component that renders its children in a grid animating them when their position changes",
   "main": "./src/AnimatedGrid.js",
