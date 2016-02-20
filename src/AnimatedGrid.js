@@ -1,5 +1,10 @@
-const React = require('react')
-const {Component, PropTypes, Children} = React
+import React, {Component, PropTypes, Children} from 'react'
+import {
+  calculateItemsPerRow,
+  calculateAdaptativeMargin,
+  calculatePosition,
+  calculateCoordinates
+} from 'position'
 
 class AnimatedGrid extends Component {
   constructor (props) {
@@ -23,7 +28,7 @@ class AnimatedGrid extends Component {
   }
   parseChildren () {
     if (this.state.width === 0) {
-      return Children.map(child => this.renderChild(child))
+      return Children.map((child) => this.renderChild(child))
     }
     const {children, width, height, margin} = this.props
     const elementsPerRow = calculateItemsPerRow(width, margin, this.state.width)
@@ -78,40 +83,6 @@ AnimatedGrid.defaultProps = {
   childClassName: '',
   transitionTime: '400ms',
   transitionTimingFunction: 'ease-out'
-}
-
-/*
-  m == min margin
-  W == Wraper width
-  w == element's width
-  n == number of elements per row
-  M == new margin to apply to adapt properly
-
-  |        W          |
-   ___________________
-  | m | w | m | w | m |
-
-  W = 2 * w + 3 * m = 2( m + w ) + m = n ( m + w ) + m
-  n = ( W - m ) / ( m + w )
-  M = ( W - w * n ) / ( n + 1 )
-  */
-const calculateItemsPerRow = (width, margin, wrapper) => {
-  return Math.floor((wrapper - margin) / (margin + width))
-}
-const calculateAdaptativeMargin = (wrapper, width, perRow) => {
-  return (wrapper - width * perRow) / (perRow + 1)
-}
-const calculatePosition = (index, perRow) => {
-  const row = Math.floor(index / perRow)
-  return { row, col: index - row * perRow }
-}
-const calculateCoordinates = (row, col, width, height, margin, verticalMargin) => {
-  const vMargin = verticalMargin === undefined
-    ? margin : verticalMargin
-  return {
-    left: (width + margin) * col + margin,
-    top: (height + vMargin) * row + vMargin
-  }
 }
 
 module.exports = AnimatedGrid

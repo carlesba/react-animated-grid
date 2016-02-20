@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import AnimatedGrid from '../src/AnimatedGrid'
+import AnimatedGrid from 'AnimatedGrid'
 require('./main.sass')
 const newArray = (length) => {
   return Array.apply(null, Array(length)).map(Number.prototype.valueOf, 0)
@@ -40,7 +40,7 @@ class App extends Component {
     const {elements, removedElements} = this.state
     return elements
     .filter(({id}) => removedElements.indexOf(id) < 0)
-    .map(item => {
+    .map((item) => {
       const {id, name} = item
       return (
         <div
