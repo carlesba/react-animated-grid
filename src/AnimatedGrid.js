@@ -60,7 +60,7 @@ class AnimatedGrid extends Component {
   render () {
     return (
       <div
-        ref={node => this._wrapper = node}
+        ref={(node) => { this._wrapper = node }}
         className={this.props.className}
         style={{position: 'relative'}}
       >{this.parseChildren()}</div>
