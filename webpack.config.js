@@ -1,7 +1,8 @@
 var webpackDevServer = 'webpack-dev-server/client?http://localhost:8080'
+var path = require('path')
 
 module.exports = {
-  context: __dirname + '/example',
+  context: path.join(__dirname, '/example'),
   entry: {
     index: [
       './index',
@@ -9,7 +10,7 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, '/dist'),
     filename: '[name].dist.js'
   },
   resolve: {
@@ -39,7 +40,7 @@ module.exports = {
   },
   sassLoader: {
     includePaths: [
-      __dirname + '/src/styles'
+      path.join(__dirname, '/src/styles')
     ],
     indentedSyntax: true
   }
